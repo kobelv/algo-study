@@ -1,8 +1,7 @@
 package com.kobe.algo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ThreeSum {
     //暴力法：O(n^3)
@@ -68,5 +67,6 @@ public class ThreeSum {
         int[] arr = {-1, 0, 1, 2, -1, -4};
         ThreeSum.threeSum(arr);
         ThreeSum.threeSum2(arr);
+
     }
 }
