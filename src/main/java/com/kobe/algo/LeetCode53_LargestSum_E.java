@@ -14,4 +14,19 @@ package com.kobe.algo;
  *
  */
 public class LeetCode53_LargestSum_E {
+    public static void main(String[] args){
+        int[] arr={-2,1,-3,4,-1,2,1,-5,4};
+        System.out.println(find(arr));
+    }
+
+    public static int find(int[] num){
+        int ans=num[0], pre=0;
+        for(int i : num){
+            pre = Math.max(pre+i,i);//比较：前一个位置上的最大和 vs 我自己
+            ans = Math.max(pre, ans);
+        }
+        return ans;
+    }
+
+
 }

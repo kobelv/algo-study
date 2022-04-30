@@ -20,4 +20,47 @@ package com.kobe.algo;
  *
  */
 public class LeetCode66_AddOne_E {
+
+
+    public static void main(String[] args){
+        int[] num = {1,3,2,9};
+        //print - before
+        printArr(num);
+
+        //print - after
+        printArr(addOne(num));
+    }
+
+    private static int[] addOne(int[] input){
+        for(int j=input.length-1; j>0; j--){
+            if(j == input.length-1){
+                input[j] +=1;
+            }
+
+            if(input[j] >9){
+                input[j] = input[j]%10;
+                input[j-1] += 1;
+            }
+        }
+
+        if(input[0] >9){
+            int[] output = new int[input.length+1];
+            output[0] = 1;
+            input[0] %= 10;
+            for (int i=0; i<input.length;i++){
+                output[i+1] = input[i];
+            }
+            return output;
+        }
+
+        return input;
+    }
+
+    private static void printArr(int[] arr){
+        for (int i=0; i<arr.length;i++){
+            System.out.print(arr[i]);
+        }
+        System.out.println();
+    }
+
 }
