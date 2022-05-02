@@ -25,4 +25,20 @@ package com.kobe.algo;
  *
  */
 public class LeetCode70_ClimbStairs_E {
+
+    public static void main(String[] args) {
+        System.out.println(calc(5));
+    }
+
+   private static int calc(int n){
+       if (n==1){
+           return 1;
+       }
+       if (n==2){
+           return 2;
+       }
+
+       return calc(n-1) + calc(n-2);
+   }
+
 }
