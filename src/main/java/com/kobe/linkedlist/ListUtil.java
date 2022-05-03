@@ -5,13 +5,14 @@ public class ListUtil {
     public static ListNode buildList(int[] arr){
         ListNode head = null;
         ListNode preNode = null;
-        for(int i=arr.length-1; i>=0; i--){
+        for(int i=0; i<arr.length; i++){
             ListNode node = new ListNode(arr[i]);
-            if(i==arr.length-1){
+            if(i == 0){
                 head = node;
                 preNode = node;
                 continue;
             }
+
             preNode.next = node;
             preNode = preNode.next;
         }
