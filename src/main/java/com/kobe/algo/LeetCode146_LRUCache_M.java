@@ -4,7 +4,7 @@ import com.kobe.linkedlist.ListNode_Double;
 
 import java.util.*;
 
-public class LeetCode146_LRUCache {
+public class LeetCode146_LRUCache_M {
     public Map<Integer, ListNode_Double> map = new HashMap<>();
     public int size;
     public int capacity;
@@ -12,7 +12,7 @@ public class LeetCode146_LRUCache {
     public ListNode_Double dummyHead;
     public ListNode_Double dummyTail;
 
-    public LeetCode146_LRUCache(int capacity){
+    public LeetCode146_LRUCache_M(int capacity){
         list = new ListNode_Double();
         dummyHead = new ListNode_Double();
         dummyTail = new ListNode_Double();
@@ -69,7 +69,7 @@ public class LeetCode146_LRUCache {
     }
 
     public static void main(String[] args) {
-        LeetCode146_LRUCache lRUCache = new LeetCode146_LRUCache(2);
+        LeetCode146_LRUCache_M lRUCache = new LeetCode146_LRUCache_M(2);
         lRUCache.put(1, 1); // 缓存是 {1=1}
         lRUCache.put(2, 2); // 缓存是 {1=1, 2=2}
         lRUCache.get(1);    // 返回 1
