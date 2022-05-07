@@ -1,6 +1,5 @@
 package com.kobe.tree;
 
-import sun.awt.image.ImageWatched;
 
 import java.util.*;
 
@@ -128,7 +127,7 @@ public class TreeUtil {
 		util.inOrderTravel(root);
 		util.postOrderTravel(root);*/
 		//util.bfs(root);
-		//util.dfs(root);
+		//util.inOrder(root);
 		LinkedList<Integer> inputList = new LinkedList<>(Arrays.asList(
 				new Integer[]{3,2,9,null,null,10,null,null,8,null,4}));
 		TreeNode node = TreeUtil.createBinaryTreeByList(inputList);

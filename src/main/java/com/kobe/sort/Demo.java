@@ -1,17 +1,17 @@
 package com.kobe.sort;
 
-import com.kobe.util.Utils;
+import com.kobe.array.ArrayUtils;
 
 public class Demo {
     public static void main(String[] args) {
         /**
          * test results:
-         * int[] arr = Utils.generateRandomArray(900000, 1000000000);
+         * int[] arr = ArrayUtils.generateRandomArray(900000, 1000000000);
          * InsertSort sort time costs: 73962
          * BubbleSort sort time costs: 77934
          * ChooseSort sort time costs: 78679
          */
-        int[] arr = Utils.generateRandomArray(5, 10);
+        int[] arr = ArrayUtils.generateRandomArray(5, 10);
         String[] sortTypes = new String[]{"InsertSort",
                 "BubbleSort","ChooseSort","MergeSort","QuickSort"};
 
@@ -35,6 +35,6 @@ public class Demo {
 
           QuickSort.sort(arr, 0, 4);
 
-       Utils.printArray(arr);
+       ArrayUtils.printArray(arr);
     }
 }

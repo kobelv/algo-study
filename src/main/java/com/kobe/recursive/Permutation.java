@@ -1,6 +1,6 @@
 package com.kobe.recursive;
 
-import com.kobe.util.Utils;
+import com.kobe.array.ArrayUtils;
 
 import java.util.ArrayList;
 
@@ -60,6 +60,6 @@ public class Permutation {
         String[] arr = {"1","2","3","4","5","6","7","8","9"};
         //String[] arr = {"a","b","c","d","e","f"};
         ArrayList arrayList = Permutation.calcPermutation(arr, arr.length);
-        Utils.printResults(arrayList);
+        ArrayUtils.printResults(arrayList);
     }
 }

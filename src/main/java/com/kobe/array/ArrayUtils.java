@@ -1,9 +1,9 @@
-package com.kobe.util;
+package com.kobe.array;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Utils {
+public class ArrayUtils {
 
     public static void printResults(ArrayList<String> finalResult) {
         if (finalResult == null) {

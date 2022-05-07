@@ -24,4 +24,51 @@ package com.kobe.array;
  *
  */
 public class LeetCode200_CalcIslands {
+
+    public static void main(String[] args) {
+        int[][] grid = {{1,1,1,1,0}, {1,1,0,1,0}, {1,1,0,0,0}, {0,0,0,0,0}};
+        System.out.println(new LeetCode200_CalcIslands().numIslands(grid));
+    }
+
+    public int numIslands(int[][] grid) {
+        if (grid == null || grid.length == 0){
+            return 0;
+        }
+        int row = grid.length;
+        int col = grid[0].length;
+        int num = 0;
+        for (int i=0; i<row; i++){
+            for (int j=0; j<col; j++){
+                num ++;
+                dfsSet2Zero(grid, i, j);
+            }
+        }
+
+        for (int i=0; i<row; i++){
+            for (int j=0; j<col; j++){
+                if (grid[i][j] == 1){
+                    //至少有一个岛
+                    num ++;
+                    dfsSet2Zero(grid, i, j);
+                }
+            }
+        }
+
+        return num;
+    }
+
+    private void dfsSet2Zero(int[][] grid, int i, int j){
+        int row = grid.length;
+        int col = grid[0].length;
+
+        if (i >= row || i < 0 || j >= col || j <0 || grid[i][j] == 0){
+            return;
+        }
+
+        grid[i][j] = 0;
+        dfsSet2Zero(grid, i-1, j);
+        dfsSet2Zero(grid, i+1, j);
+        dfsSet2Zero(grid, i, j-1);
+        dfsSet2Zero(grid, i, j+1);
+    }
 }

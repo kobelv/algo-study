@@ -1,6 +1,6 @@
 package com.kobe.recursive;
 
-import com.kobe.util.Utils;
+import com.kobe.array.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -112,6 +112,6 @@ public class ClimbStairs {
 //        long end2 = System.currentTimeMillis();
 //        System.out.println("time costs: " + (end2-start2));
 
-        Utils.printResults(ClimbStairs.stepRecords(n));
+        ArrayUtils.printResults(ClimbStairs.stepRecords(n));
     }
 }
